@@ -3,7 +3,7 @@ import loggify from './loggify';
 
 class App extends Component {
 
-  static displayName = "Namin the app"
+  // static displayName = "Naming the app"
 
 
   render() {

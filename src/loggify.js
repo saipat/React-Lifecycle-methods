@@ -18,15 +18,15 @@ export default function loggigy(Wrapped) {
 
 //template literal with css rules
 const LoggerContainer = styled.div `
-    backgroung-color: aliceblue;
-    border: 2px grooved aquablue;
-    border-radius: 5px;
+  background-color: aliceblue;
+  border: 2px grooved aquamarine;
+  border-radius: 5px;
 `
 
-LoggerContainer.displayName = 'LoggerContainer';
+LoggerContainer.displayName = "LoggerContainer"
 
-const H2 = styled.div `
-    color: blueviolet
+const H2 = styled.h2 `
+  color: blueviolet;
 `
 
-H2.displayName = "h2"
+H2.displayName = "H2"
