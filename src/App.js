@@ -32,6 +32,9 @@ class App extends Component {
 
   render() {
 
+    let { showPollChild } = this.state;
+
+
     return (
       <div>
         hello
@@ -42,6 +45,19 @@ class App extends Component {
           height={200}
           width={200}
         />
+
+        <button
+          onClick={ () => {
+            this.setState((prevState) => {
+              return {
+                showPollChild: !prevState.showPollChild
+              }
+            })
+          }}
+        >
+        {(showPollChild) ? "Hide" : "Show" } PollChild
+        </button>
+        {(showPollChild) ? <PollChild /> : null } 
       </div>
     );
   }
