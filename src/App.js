@@ -63,6 +63,45 @@ class App extends Component {
   }
 }
 
+class PollChild extends Component {
+
+  static displayName = "PollChild";
+
+  state = {
+    poll: Math.random()
+  }
+
+  componentDidMount() {
+    this.pollData()
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.pollInterval)
+  }
+
+  pollData = () => {
+    this.pollInterval = setInterval(
+      () => {
+        console.log("Poll!");
+        this.setState({
+          poll: Math.random()
+        });
+      },
+      1000
+    )
+  }
+
+  render() {
+    return(
+      <h4>
+        poll: {this.state.poll}
+      </h4>
+    )
+  }
+}
+
+
 App = loggify(App);
+PollChild = loggify(PollChild);
 
 export default App;
