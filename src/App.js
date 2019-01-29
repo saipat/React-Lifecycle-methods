@@ -3,11 +3,12 @@ import loggify from './loggify';
 
 class App extends Component {
 
-  // static displayName = "Naming the app"
+  static displayName = "App";
 
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
+
     return (
       <div>
         hello
